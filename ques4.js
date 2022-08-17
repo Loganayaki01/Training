@@ -12,7 +12,7 @@
 //     }
 
 //  res(arr);
-//  console.log(len);
+console.log("hi");
 
 let arr=[1,[2,[3,4]]];
 console.log(arr.flat(Infinity).length);
