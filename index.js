@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 
 const api_url = "https://demo7303877.mockable.io/"
 
-// 2)Method for filtering from the data
+
 const filteringBrandandRange = (products,brand,maxRange = Number.MAX_VALUE,minRange = Number.MIN_VALUE) => {
   let filterBrand = products?.filter((item) =>{
     return item.brand === brand && minRange<=item.price && maxRange>item.price;
@@ -10,7 +10,7 @@ const filteringBrandandRange = (products,brand,maxRange = Number.MAX_VALUE,minRa
   })
   return filterBrand;
 }
-// 1)Method for Getting the minimum and maximum price from the data
+
 const minMaxPrice = (products) => {
   let minPrice = Number.MAX_VALUE;
   let maxPrice = Number.MIN_VALUE;
@@ -23,7 +23,7 @@ const minMaxPrice = (products) => {
   return {MinimumPrice:minPrice,MaximumPrice:maxPrice};
 }
 
-// 3)Method for getting the product from list of product
+
 const productListMethod = (productList,products)=> {
   let result = [];
   for (let i = 0;i<productList.length;i++){
@@ -35,7 +35,7 @@ const productListMethod = (productList,products)=> {
   return result;
 }
 
-// Defining async function
+
 const getApi = async function(url){
   // Storing response
   const response = await fetch(url);
@@ -48,5 +48,5 @@ const getApi = async function(url){
   // console.log(filteringBrandandRange(data.products,'HRX by Hrithik Roshan',1500,1000));
   console.log(productListMethod(["Fastrack Unisex Black & Green Reflex 2.0 Smart Band","Red Tape Men Black Leather Loafers","Roadster Men Black Solid Tailored Jacket","Just for Fun"],data.products));
 }
-// Calling that async function
+
 getApi(api_url);
