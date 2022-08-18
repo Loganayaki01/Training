@@ -43,9 +43,9 @@ const getApi = async function(url){
   var data = await response.json();
 
   // console.log(data);
-  // let minMaxob = minMaxPrice(data.products);
-  // console.log(`Maximum Value : ${minMaxobj.MaximumPrice} And Minimum Value : ${minMaxobj.MinimumPrice}`);
-  // console.log(filteringBrandandRange(data.products,'HRX by Hrithik Roshan',1500,1000));
+   let minMaxob = minMaxPrice(data.products);
+   console.log(`Maximum Value : ${minMaxobj.MaximumPrice} And Minimum Value : ${minMaxobj.MinimumPrice}`);
+   console.log(filteringBrandandRange(data.products,'HRX by Hrithik Roshan',1500,1000));
   console.log(productListMethod(["Fastrack Unisex Black & Green Reflex 2.0 Smart Band","Red Tape Men Black Leather Loafers","Roadster Men Black Solid Tailored Jacket","Just for Fun"],data.products));
 }
 
